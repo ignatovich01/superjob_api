@@ -1,6 +1,6 @@
 import { $host } from '.';
 
-export const auth = async () => {
+export const authByPassword = async () => {
   const { data } = await $host.get('/2.0/oauth2/password', {
     params: {
       login: 'sergei.stralenia@gmail.com',
@@ -15,4 +15,12 @@ export const auth = async () => {
   localStorage.setItem('refresh', data.refresh_token);
 
   return data;
+};
+export const initAccessToken = async () => {
+  if (
+    localStorage.getItem('access') == null ||
+    !localStorage.getItem('access')
+  ) {
+    await authByPassword();
+  }
 };

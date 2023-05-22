@@ -5,13 +5,13 @@ import Header from './components/Header';
 import { MantineProvider } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import { Loader } from '@mantine/core';
-import { auth } from './http/userAPI';
+import { initAccessToken } from './http/userAPI';
 
 function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    auth().then((data) => console.log(data));
+    initAccessToken();
     setTimeout(() => {
       setLoading(false);
     }, 1400);

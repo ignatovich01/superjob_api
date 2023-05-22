@@ -1,0 +1,52 @@
+@import "../../scss/variables";
+
+.favorite_wrapper {
+    background-color: $background;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    height: 91vh;
+
+    .content {
+        height: 596px;
+        display: flex;
+        flex-direction: column;
+        width: 773px;
+        margin-top: -16px;
+        margin: 0 auto;
+        // background-color: red;
+        .nothing {
+            width: 327px;
+            height: 366px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            img {
+                width: 240px;
+                height: 230px;
+                margin: auto;
+            }
+            .nothing_title {
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 29px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #343a40;
+                margin: auto;
+                margin-bottom: 32px;
+            }
+            button {
+                width: 164px;
+                height: 42px;
+                background-color: $Blue100;
+                color: $Blue600;
+                padding: 10px 24px;
+                border-radius: 8px;
+                margin: 0 auto;
+            }
+        }
+    }
+}

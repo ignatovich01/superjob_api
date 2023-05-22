@@ -1,5 +1,432 @@
+.header {
+  z-index: 1000;
+  background-color: #ffffff;
+  height: 84px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.header .header_left {
+  max-width: 465px;
+  flex-grow: 1;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+.header .header_left img {
+  margin-right: 7px;
+}
+.header .header_rigth {
+  width: 275px;
+  margin-left: 118px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+}
+.header .header_rigth .header_buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.active {
+  color: #5e96fc;
+  font-weight: 500;
+}
+
+.search {
+  height: 48px;
+  max-width: 773px;
+  display: flex;
+  border: 1px solid #eaebed;
+  color: #acadb9;
+  background: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+.search div {
+  width: 100%;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search div img {
+  width: 12.5px;
+  height: 12.5px;
+  margin-right: 9px;
+}
+.search div input {
+  max-width: 100%;
+  flex-grow: 1;
+  border: none;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "Inter", sans-serif;
+}
+.search div input:focus {
+  outline: none;
+}
+.search button {
+  width: 83px;
+  height: 32px;
+  background-color: #5e96fc;
+  border-radius: 8px;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  margin-top: 0px;
+}
+
+.filter {
+  font-family: "Inter", sans-serif;
+  width: 315px;
+  height: 360px;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #eaebed;
+  font-family: Inter;
+}
+.filter .filter_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 12px;
+}
+.filter .filter_title .filter_main {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+}
+.filter .filter_title .filter_reset {
+  cursor: pointer;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #acadb9;
+}
+.filter .filter_title .filter_reset .krest {
+  margin-left: 9px;
+}
+.filter .filter_body {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+}
+.filter .filter_body .input {
+  height: 40px;
+}
+.filter .filter_body .input_title {
+  margin-top: 20px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.filter .filter_button {
+  width: 100%;
+  height: 40px;
+  background-color: #5e96fc;
+  padding: 4px 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.vacancyMain {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 16px;
+  height: 137px;
+  border: 1px solid #eaebed;
+  border-radius: 12px;
+  justify-content: space-between;
+}
+.vacancyMain .left {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.vacancyMain .left h2 {
+  color: #5e96fc;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: left;
+  margin-bottom: 12.5px;
+}
+.vacancyMain .left .vacancy_body {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.vacancyMain .left .vacancy_body .dot {
+  width: 9px;
+  height: 9px;
+  margin: 5px 12px;
+}
+.vacancyMain .left .vacancy_body .salary {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-bottom: 13px;
+}
+.vacancyMain .left .vacancy_body .worktype {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.vacancyMain .left .location {
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.vacancyMain .left .location img {
+  width: 13px;
+  height: 16px;
+  margin-right: 11px;
+}
+.vacancyMain .rigth {
+  margin-right: 20px;
+}
+.vacancyMain .rigth .star {
+  display: flex;
+  cursor: pointer;
+  margin: 25px;
+}
+
+.favorite_wrapper {
+  background-color: #f5f5f5;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  height: 91vh;
+}
+.favorite_wrapper .content {
+  height: 596px;
+  display: flex;
+  flex-direction: column;
+  width: 773px;
+  margin-top: -16px;
+  margin: 0 auto;
+}
+.favorite_wrapper .content .nothing {
+  width: 327px;
+  height: 366px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.favorite_wrapper .content .nothing img {
+  width: 240px;
+  height: 230px;
+  margin: auto;
+}
+.favorite_wrapper .content .nothing .nothing_title {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #343a40;
+  margin: auto;
+  margin-bottom: 32px;
+}
+.favorite_wrapper .content .nothing button {
+  width: 164px;
+  height: 42px;
+  background-color: #deecff;
+  color: #3b7cd3;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.findVacancy {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+.findVacancy .top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: auto;
+}
+.findVacancy .top .find_left {
+  margin-top: 40px;
+  max-width: 491px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  height: 66.5vh;
+  margin-right: 28px;
+}
+.findVacancy .top .find_right {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 773px;
+}
+.findVacancy .top .find_right .boy {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  margin: 100px auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vacancy_page {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+}
+.vacancy_page .wrapper {
+  margin: 0 auto;
+}
+.vacancy_page .wrapper .page_header {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #eaebed;
+  padding: 24px;
+  width: 773px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+}
+.vacancy_page .wrapper .page_header .page_left {
+  flex-grow: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.vacancy_page .wrapper .page_header .page_left .page_title {
+  color: black;
+  font-family: Inter;
+  font-size: 28px;
+  flex-wrap: nowrap;
+  font-weight: 700;
+  line-height: 34px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.vacancy_page .wrapper .page_header .page_left .salary_work {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 16px 0;
+}
+.vacancy_page .wrapper .page_header .page_left .salary_work .page_salary {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.vacancy_page .wrapper .page_header .page_left .salary_work .page_dot {
+  margin: 0 12px;
+}
+.vacancy_page .wrapper .page_header .page_left .salary_work .page_worktype {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.vacancy_page .wrapper .page_header .page_left .page_location {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.vacancy_page .wrapper .page_header .page_right {
+  margin: 1px;
+}
+.vacancy_page .wrapper .page_body {
+  background-color: white;
+  background-color: white;
+  border: 1px solid #eaebed;
+  padding: 24px;
+  width: 773px;
+  min-height: 548px;
+  border-radius: 12px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.mantine-Pagination-dots {
+  display: none;
+}
+
 .App {
+  box-sizing: border-box;
   text-align: center;
+}
+
+.loader {
+  width: 70px;
+  display: flex;
+  margin: 50vh auto;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .App-logo {
@@ -12,7 +439,6 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

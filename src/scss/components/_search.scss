@@ -1,0 +1,54 @@
+@import "../variables";
+
+.search {
+    height: 48px;
+    max-width: 773px;
+    display: flex;
+    border: 1px solid $Gray200;
+    color: $Gray500;
+    background: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 0 12px;
+
+    div {
+        width: 100%;
+        margin-right: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+            width: 12.5px;
+            height: 12.5px;
+            margin-right: 9px;
+        }
+        input {
+            max-width: 100%;
+            flex-grow: 1;
+            border: none;
+            font-size: 14px;
+            line-height: 21px;
+            font-family: "Inter", sans-serif;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    button {
+        width: 83px;
+        height: 32px;
+        background-color: $BlueMain;
+        border-radius: 8px;
+        color: white;
+        border: none;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        display: flex;
+        margin-top: 0px;
+        // align-self: center;
+    }
+}

@@ -1,0 +1,44 @@
+import { $host } from '.';
+
+export const fetchItems = async (
+  typeOfWork,
+  salaryFrom,
+  salaryTo,
+  search,
+  pages,
+) => {
+  const { data } = await $host.get('/2.0/vacancies/', {
+    params: {
+      type_of_work: typeOfWork,
+      payment_from: salaryFrom,
+      payment_to: salaryTo,
+      keyword: search,
+      count: 4,
+      page: pages,
+      published: 1,
+    },
+  });
+  return data;
+};
+
+export const fetchFavorite = async (ids, pages) => {
+  const { data } = await $host.get('/2.0/vacancies/', {
+    params: {
+      ids,
+      count: 4,
+      page: pages - 1,
+      published: 1,
+    },
+  });
+  return data;
+};
+
+export const fetchOne = async (id) => {
+  const { data } = await $host.get('/2.0/vacancies/', {
+    params: {
+      published: 1,
+      ids: [id],
+    },
+  });
+  return data;
+};

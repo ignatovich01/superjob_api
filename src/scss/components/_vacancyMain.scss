@@ -1,0 +1,83 @@
+@import "../variables";
+
+.vacancyMain {
+    font-family: "Inter", sans-serif;
+    display: flex;
+    width: 100%;
+    background-color: $white;
+    margin: 0 auto;
+    margin-top: 16px;
+
+    height: 137px;
+    border: 1px solid $Gray200;
+    border-radius: 12px;
+
+    justify-content: space-between;
+    .left {
+        margin: 24px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            color: $BlueMain;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: left;
+            margin-bottom: 12.5px;
+        }
+        .vacancy_body {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            .dot {
+                width: 9px;
+                height: 9px;
+                margin: 5px 12px;
+            }
+            .salary {
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 20px;
+                letter-spacing: 0px;
+                text-align: left;
+                margin-bottom: 13px;
+            }
+            .worktype {
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0px;
+                text-align: left;
+            }
+        }
+        .location {
+            align-items: center;
+            display: flex;
+            justify-content: left;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            img {
+                width: 13px;
+                height: 16px;
+                margin-right: 11px;
+            }
+        }
+    }
+    .rigth {
+        margin-right: 20px;
+        .star {
+            display: flex;
+            cursor: pointer;
+            margin: 25px;
+        }
+    }
+}

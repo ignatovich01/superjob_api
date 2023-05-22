@@ -16,11 +16,3 @@ export const authByPassword = async () => {
 
   return data;
 };
-export const initAccessToken = async () => {
-  if (
-    localStorage.getItem('access') == null ||
-    !localStorage.getItem('access')
-  ) {
-    await authByPassword();
-  }
-};

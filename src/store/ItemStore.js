@@ -1,14 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 export default class ItemStore {
   constructor() {
-    this._typeOfWork = [
-      { value: 6, label: 'полный день' },
-      { value: 10, label: 'неполный день' },
-      { value: 12, label: 'сменный график' },
-      { value: 13, label: 'частичная занятость' },
-      { value: 7, label: 'временная работа' },
-      { value: 9, label: 'выхтовым методом' },
-    ];
+    this._catalog = [];
     this._salaryFrom = [
       { value: 5000, label: '5k' },
       { value: 10000, label: '10k' },
@@ -43,8 +36,8 @@ export default class ItemStore {
     this._toggle = false;
     makeAutoObservable(this);
   }
-  setTypeOfWork(type) {
-    this._typeOfWork = type;
+  setCatalog(type) {
+    this._catalog = type;
   }
   setSalaryFrom(salary) {
     this._salaryFrom = salary;
@@ -71,8 +64,8 @@ export default class ItemStore {
     this._toggle = !this.toggle;
   }
 
-  get typeOfWork() {
-    return this._typeOfWork;
+  get catalog() {
+    return this._catalog;
   }
   get salaryFrom() {
     return this._salaryFrom;
@@ -97,5 +90,8 @@ export default class ItemStore {
   }
   get toggle() {
     return this._toggle;
+  }
+  pushCatalog(item) {
+    this._catalog.push(item);
   }
 }

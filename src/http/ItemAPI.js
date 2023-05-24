@@ -1,7 +1,12 @@
 import { $host } from '.';
+// /2.0/catalogues/
 
+export const fetchCatalogues = async () => {
+  const { data } = await $host.get('/2.0/catalogues/');
+  return data;
+};
 export const fetchItems = async (
-  typeOfWork,
+  catalogues,
   salaryFrom,
   salaryTo,
   search,
@@ -9,7 +14,7 @@ export const fetchItems = async (
 ) => {
   const { data } = await $host.get('/2.0/vacancies/', {
     params: {
-      type_of_work: typeOfWork,
+      catalogues: catalogues,
       payment_from: salaryFrom,
       payment_to: salaryTo,
       keyword: search,

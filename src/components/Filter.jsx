@@ -11,18 +11,17 @@ import { Input } from '@mantine/core';
 const Filter = observer(() => {
   const { item } = useContext(Context);
   const form = useForm({
-    initialValues: { type: '', from: '', to: '' },
+    initialValues: { catalog: '', from: '', to: '' },
   });
-
   function submit(form) {
-    console.log(form.values);
     item.setFilter(form.values);
+    console.log(form);
   }
   function reset(form) {
     form.reset();
     item.setFilter({});
   }
-
+  console.log(item.catalog.length);
   return (
     <Box maw={320} mx="auto" className="filter">
       <div className="filter_title">
@@ -39,8 +38,8 @@ const Filter = observer(() => {
           className="input"
           data-elem="industry-select"
           placeholder="Выберите отрасль"
-          {...form.getInputProps('type')}
-          data={item.typeOfWork}
+          {...form.getInputProps('catalog')}
+          data={item.catalog}
           rightSection={<img src={FrameDown} alt="" />}
         />
         <div className="input_title">Оклад</div>

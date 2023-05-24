@@ -17,7 +17,7 @@ function App() {
     }, 1400);
   }, []);
 
-  console.log(Object.keys(localStorage));
+  // console.log(Object.keys(localStorage));
   if (loading) {
     return <Loader size="xl" variant="dots" className="loader" />;
   }

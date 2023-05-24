@@ -8,8 +8,6 @@ const Search = observer(() => {
   const [search, setSearch] = useState('');
   function searchButton() {
     item.setSearch(search);
-
-    setSearch('');
   }
   return (
     <div className="search">

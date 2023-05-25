@@ -1,5 +1,4 @@
 import { $host } from '.';
-// /2.0/catalogues/
 
 export const fetchCatalogues = async () => {
   const { data } = await $host.get('/2.0/catalogues/');

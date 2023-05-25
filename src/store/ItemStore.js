@@ -2,30 +2,8 @@ import { makeAutoObservable } from 'mobx';
 export default class ItemStore {
   constructor() {
     this._catalog = [];
-    this._salaryFrom = [
-      { value: 5000, label: '5k' },
-      { value: 10000, label: '10k' },
-      { value: 20000, label: '20k' },
-      { value: 30000, label: '30k' },
-      { value: 4000, label: '40k' },
-      { value: 50000, label: '50k' },
-      { value: 80000, label: '80k' },
-      { value: 100000, label: '100k' },
-      { value: 120000, label: '120k' },
-      { value: 150000, label: '150k' },
-    ];
-    this._salaryTo = [
-      { value: 5000, label: '5k' },
-      { value: 10000, label: '10k' },
-      { value: 20000, label: '20k' },
-      { value: 30000, label: '30k' },
-      { value: 4000, label: '40k' },
-      { value: 50000, label: '50k' },
-      { value: 80000, label: '80k' },
-      { value: 100000, label: '100k' },
-      { value: 120000, label: '120k' },
-      { value: 150000, label: '150k' },
-    ];
+    this._salaryFrom = '';
+    this._salaryTo = '';
     this._search = '';
 
     this._filter = [{ type: '', from: '', to: '' }];

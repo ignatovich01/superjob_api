@@ -21,7 +21,6 @@ const FavoriteVacancy = observer(() => {
       Object.keys(localStorage).filter((i) => i != 'refresh' && i != 'access'),
       item.page,
     ).then((data) => {
-      console.log(data.objects);
       item.setFavorite(data.objects);
     });
   }, [item.page, item.toggle]);

@@ -15,13 +15,11 @@ const Filter = observer(() => {
   });
   function submit(form) {
     item.setFilter(form.values);
-    console.log(form);
   }
   function reset(form) {
     form.reset();
     item.setFilter({});
   }
-  console.log(item.catalog.length);
   return (
     <Box maw={320} mx="auto" className="filter">
       <div className="filter_title">

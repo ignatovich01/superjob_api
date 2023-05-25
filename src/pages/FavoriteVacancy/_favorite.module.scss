@@ -1,19 +1,20 @@
 @import "../../scss/variables";
 
 .favorite_wrapper {
-    background-color: $background;
+    height: 100%;
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
-    height: 91vh;
-
+    margin: auto;
+    min-width: 100%;
+    background-color: $background;
     .content {
         height: 596px;
         display: flex;
         flex-direction: column;
         width: 773px;
-        margin-top: -16px;
         margin: 0 auto;
+        margin-top: -16px;
+
         .nothing {
             width: 327px;
             height: 366px;
@@ -46,6 +47,16 @@
                 border-radius: 8px;
                 margin: 0 auto;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .favorite_wrapper {
+        .content {
+            margin-left: 30px;
+            margin-right: 30px;
+            margin: auto;
         }
     }
 }

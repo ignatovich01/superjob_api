@@ -23,7 +23,6 @@ const VacancyPage = observer(() => {
       setTimeout(() => {
         setLoading(true);
       }, 500);
-      console.log(data.objects);
     });
   }, []);
 

@@ -11,7 +11,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    authByPassword().then((data) => console.log(data));
+    authByPassword();
     setTimeout(() => {
       setLoading(false);
     }, 1400);

@@ -18,6 +18,7 @@ const FindVacancy = observer(() => {
       data.forEach((i) => item.pushCatalog({ value: i.key, label: i.title }));
     });
   }, []);
+
   useEffect(() => {
     fetchItems(
       item.filter.catalog,
